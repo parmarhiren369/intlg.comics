@@ -1,22 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { InsightsList } from "@/components/site/InsightsList";
+import { createFileRoute, redirect } from "@tanstack/react-router";
+import { VideosList } from "@/components/site/VideosList";
 
 export const Route = createFileRoute("/insights/")({
+  beforeLoad: () => {
+    throw redirect({ to: "/videos" });
+  },
   head: () => ({
     meta: [
-      { title: "Insights & Market Intelligence — Legacy Digitronics" },
+      { title: "Video Intelligence & Briefings — Legacy Digitronics" },
       {
         name: "description",
         content:
-          "Executive research reports, industry benchmarks, and strategic case studies on global outsourcing, RPO, and technology from Legacy Group International.",
-      },
-      { property: "og:title", content: "Insights & Market Intelligence — Legacy Digitronics" },
-      {
-        property: "og:description",
-        content:
-          "Access enterprise research, trend analysis, and benchmark reports on global workforce and operational strategy.",
+          "Executive video briefings, client transformation stories, and operational walkthroughs from Legacy Group International.",
       },
     ],
   }),
-  component: InsightsList,
+  component: VideosList,
 });
