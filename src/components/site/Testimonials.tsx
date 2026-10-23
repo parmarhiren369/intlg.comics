@@ -48,7 +48,7 @@ const testimonials = [
   },
 
   {
-    name: "Lauren-Kondic",
+    name: "Lauren Kondic",
     company: "Research Manager at World Bridge Partners",
     quote:
       "A trusted long-term outsourcing partner.",
@@ -167,7 +167,7 @@ export function Testimonials() {
       className="text-center"
     >
 
-      <div className="text-sm uppercase tracking-[0.3em] text-gold">
+      <div className="text-sm uppercase tracking-[0.3em] text-[#EE7F23]">
         Success Stories
       </div>
 
@@ -249,7 +249,7 @@ export function Testimonials() {
       transition={{ duration: 0.7, ease }}
       className="max-w-4xl mx-auto text-center"
     >
-      <div className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+      <div className="text-sm font-semibold uppercase tracking-[0.3em] text-[#EE7F23]">
         Trusted Worldwide
       </div>
 
@@ -326,7 +326,7 @@ export function Testimonials() {
       transition={{ duration: 0.7, ease }}
       className="text-center"
     >
-      <div className="text-sm uppercase tracking-[0.3em] text-gold">
+      <div className="text-sm uppercase tracking-[0.3em] text-[#EE7F23]">
         Our Impact
       </div>
 

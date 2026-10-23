@@ -134,7 +134,7 @@ export function Industries() {
       <section className="bg-white py-20">
         <div className={PAGE_X}>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#E8A62C]">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#EE7F23]">
               Trusted Across Industries
             </p>
 
@@ -257,7 +257,7 @@ export function Industries() {
           <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white/70 p-10 shadow-(--shadow-elegant) backdrop-blur-xl md:p-14">
             <div className="relative flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
               <div>
-                <div className="text-xs uppercase tracking-[0.28em] text-gold">
+                <div className="text-xs uppercase tracking-[0.28em] text-[#EE7F23]">
                   Don't see your industry?
                 </div>
                 <h3 className="mt-3 max-w-xl font-display text-3xl leading-tight text-navy-deep sm:text-4xl">

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Globe2, TrendingUp } from "lucide-react";
+import { ArrowLeft, ArrowRight, ShieldCheck, Globe2, TrendingUp } from "lucide-react";
 import { Nav } from "./Nav";
 import { CountUp } from "./Stat";
 import bridgeUrl from "@/assets/golden-gate.avif";
@@ -12,6 +12,9 @@ import { useEffect } from "react";
 import { ScrollToTop } from "./ScrollToTop";
 import { Footer } from "./Footer";
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
+
+
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   show: (i: number = 0) => ({
@@ -47,6 +50,41 @@ const pillars = [
 ];
 
 export function Home() {
+
+  const testimonials = [
+  {
+    quote:
+      "I've been working with the Legacy Group since my company got started.",
+    name: "Kevin Saylor",
+    designation: "CEO at Financial Recruiters International",
+  },
+  {
+    quote:
+      "I've worked with the Legacy Group at Raj for over seven years.",
+    name: "Gary Boza",
+    designation: "CEO of WorldBridge Partners",
+  },
+  {
+    quote:
+      "Along the way, someone recommended I reach out to Legacy Group International — LGI — and that turned out to be great advice.",
+    name: "Karel Lukas",
+    designation: "Head of the Trevi Group",
+  },
+];
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const nextTestimonial = () => {
+    setActiveTestimonial(
+      (current) => (current + 1) % testimonials.length
+    );
+  };
+
+  const previousTestimonial = () => {
+    setActiveTestimonial(
+      (current) => (current - 1 + testimonials.length) % testimonials.length
+    );
+  };
+
   useEffect(() => {
     if (window.location.hash) {
       requestAnimationFrame(() => scrollToHash(window.location.hash));
@@ -208,7 +246,7 @@ xl:h-[640px]
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="text-xs uppercase tracking-[0.28em] text-gold">Who we are</div>
+              <div className="text-xs uppercase tracking-[0.28em] text-[#EE7F23]">Who we are</div>
               <h2 className="mt-4 text-4xl font-semibold leading-tight text-navy-deep sm:text-5xl">
                 An outsourcing partner built for growth, driven by quality
               </h2>
@@ -327,17 +365,70 @@ xl:h-[640px]
               >
                 
                 <div className="relative">
-                  <div className="text-xs uppercase tracking-[0.28em] text-white">
-  Since 2005 · 20+ Years
+  <div className="text-xs uppercase tracking-[0.28em] text-white">
+    Since 2005 · 20+ Years
+  </div>
+
+  <div className="mt-6 flex items-center gap-4">
+
+    {/* Previous */}
+    <button
+      type="button"
+      onClick={previousTestimonial}
+      aria-label="Previous testimonial"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+    >
+      <ArrowLeft className="h-5 w-5" />
+    </button>
+
+    {/* Testimonial */}
+    <div className="min-w-0 flex-1 text-center">
+  <p
+    key={activeTestimonial}
+    className="font-display text-2xl leading-snug text-white"
+  >
+    "{testimonials[activeTestimonial].quote}"
+  </p>
+
+  <div className="mt-6 text-center">
+    <div className="text-sm font-semibold text-white">
+      — {testimonials[activeTestimonial].name}
+    </div>
+
+    <div className="mt-1 text-sm text-white/70">
+      {testimonials[activeTestimonial].designation}
+    </div>
+  </div>
 </div>
-                  <p className="mt-4 font-display text-2xl leading-snug">
-                    "Legacy doesn't just deliver headcount — they engineer the operating layer that
-                    lets us scale without breaking."
-                  </p>
-                  <div className="mt-6 text-sm text-white/70">
-                    — VP Operations,  P3 printing and packaging industry
-                  </div>
-                </div>
+    {/* Next */}
+    <button
+      type="button"
+      onClick={nextTestimonial}
+      aria-label="Next testimonial"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+    >
+      <ArrowRight className="h-5 w-5" />
+    </button>
+
+  </div>
+
+  {/* Slide indicators */}
+  <div className="mt-6 flex justify-center gap-2">
+    {testimonials.map((_, index) => (
+      <button
+        key={index}
+        type="button"
+        onClick={() => setActiveTestimonial(index)}
+        aria-label={`Go to testimonial ${index + 1}`}
+        className={`h-2 w-2 rounded-full transition-all ${
+          activeTestimonial === index
+            ? "bg-[#EE8021]"
+            : "bg-white/40"
+        }`}
+      />
+    ))}
+  </div>
+</div>
               </motion.div>
             </div>
           </div>
@@ -352,9 +443,9 @@ xl:h-[640px]
         
         <div className={`flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center ${PAGE_X}`}>
           <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.28em] text-black">
-              Ready when you are
-            </div>
+            <div className="text-sm font-semibold uppercase tracking-[0.28em] text-[#EE7F23]">
+  Ready when you are
+</div>
             <h3 className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-black sm:text-4xl">
               Let's architect the next decade of your operations.
             </h3>

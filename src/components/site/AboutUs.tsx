@@ -1,7 +1,7 @@
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { ScrollToTop } from "./ScrollToTop";
-import worldTeamImg from "../../assets/group-people-with-world-map.jpg";
+import worldTeamImg from "../../assets/about-us-group.png";
 import { PAGE_X } from "@/lib/utils";
 
 export function AboutUs() {
@@ -113,9 +113,9 @@ export function AboutUs() {
 
             {/* RIGHT CONTENT */}
             <div className="mt-6 lg:mt-0">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#E8A62C]">
-                OUR STORY
-              </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#EE7F23]">
+  OUR STORY
+</p>
 
               <h2 className="mt-5 text-3xl font-bold leading-tight text-[#071330] sm:mt-6 sm:text-4xl lg:text-5xl">
                 Two Decades of
@@ -156,7 +156,7 @@ export function AboutUs() {
         <section className="bg-slate-50 py-16 sm:py-24">
           <div className={PAGE_X}>
             <div className="mb-12 text-center sm:mb-16">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#E8A62C]">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#EE7F23]">
                 OUR PURPOSE
               </p>
 

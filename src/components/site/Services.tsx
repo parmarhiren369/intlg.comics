@@ -514,7 +514,7 @@ export function Services() {
           >
             <div className="relative flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
               <div>
-                <div className="text-xs uppercase tracking-[0.28em] text-gold">Ready when you are</div>
+                <div className="text-xs uppercase tracking-[0.28em] text-[#EE7F23]">Ready when you are</div>
                 <h3 className="mt-3 max-w-xl font-display text-3xl leading-tight text-navy-deep sm:text-4xl">
                   Design the outsourced operating layer for your next chapter.
                 </h3>

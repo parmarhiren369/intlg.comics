@@ -10,37 +10,40 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as SocialMediaDigitalMarketingRouteImport } from './routes/services/social-media-digital-marketing'
-import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as LeadGenerationRouteImport } from './routes/lead-generation'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BusinessDevelopmentRouteImport } from './routes/business-development'
+import { Route as AgreementsRouteImport } from './routes/agreements'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as IndustriesIndexRouteImport } from './routes/industries/index'
+import { Route as ServicesSocialMediaDigitalMarketingRouteImport } from './routes/services/social-media-digital-marketing'
+import { Route as IndustriesSlugRouteImport } from './routes/industries/$slug'
 
 const TestimonialsRoute = TestimonialsRouteImport.update({
   id: '/testimonials',
   path: '/testimonials',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SocialMediaDigitalMarketingRoute =
-  SocialMediaDigitalMarketingRouteImport.update({
-    id: '/services/social-media-digital-marketing',
-    path: '/services/social-media-digital-marketing',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const IndustriesRoute = IndustriesRouteImport.update({
-  id: '/industries',
-  path: '/industries',
+const LeadGenerationRoute = LeadGenerationRouteImport.update({
+  id: '/lead-generation',
+  path: '/lead-generation',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessDevelopmentRoute = BusinessDevelopmentRouteImport.update({
+  id: '/business-development',
+  path: '/business-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgreementsRoute = AgreementsRouteImport.update({
+  id: '/agreements',
+  path: '/agreements',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -53,72 +56,122 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
+  id: '/industries/',
+  path: '/industries/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSocialMediaDigitalMarketingRoute =
+  ServicesSocialMediaDigitalMarketingRouteImport.update({
+    id: '/services/social-media-digital-marketing',
+    path: '/services/social-media-digital-marketing',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const IndustriesSlugRoute = IndustriesSlugRouteImport.update({
+  id: '/industries/$slug',
+  path: '/industries/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/agreements': typeof AgreementsRoute
+  '/business-development': typeof BusinessDevelopmentRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
-  '/services': typeof ServicesRoute
-  '/services/social-media-digital-marketing': typeof SocialMediaDigitalMarketingRoute
+  '/lead-generation': typeof LeadGenerationRoute
   '/testimonials': typeof TestimonialsRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
+  '/services/social-media-digital-marketing': typeof ServicesSocialMediaDigitalMarketingRoute
+  '/industries/': typeof IndustriesIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/agreements': typeof AgreementsRoute
+  '/business-development': typeof BusinessDevelopmentRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
-  '/services': typeof ServicesRoute
+  '/lead-generation': typeof LeadGenerationRoute
   '/testimonials': typeof TestimonialsRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
+  '/services/social-media-digital-marketing': typeof ServicesSocialMediaDigitalMarketingRoute
+  '/industries': typeof IndustriesIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/agreements': typeof AgreementsRoute
+  '/business-development': typeof BusinessDevelopmentRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
-  '/services': typeof ServicesRoute
-  '/services/social-media-digital-marketing': typeof SocialMediaDigitalMarketingRoute
+  '/lead-generation': typeof LeadGenerationRoute
   '/testimonials': typeof TestimonialsRoute
+  '/industries/$slug': typeof IndustriesSlugRoute
+  '/services/social-media-digital-marketing': typeof ServicesSocialMediaDigitalMarketingRoute
+  '/industries/': typeof IndustriesIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-  '/'
-  | '/about'
-  | '/contact'
-  | '/industries'
-  | '/services'
-  | '/services/social-media-digital-marketing'
-  | '/testimonials'
+    | '/'
+    | '/about'
+    | '/agreements'
+    | '/business-development'
+    | '/contact'
+    | '/lead-generation'
+    | '/testimonials'
+    | '/industries/$slug'
+    | '/services/social-media-digital-marketing'
+    | '/industries/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
-  '/'
-  | '/about'
-  | '/contact'
-  | '/industries'
-  | '/services'
-  | '/services/social-media-digital-marketing'
-  | '/testimonials'
+    | '/'
+    | '/about'
+    | '/agreements'
+    | '/business-development'
+    | '/contact'
+    | '/lead-generation'
+    | '/testimonials'
+    | '/industries/$slug'
+    | '/services/social-media-digital-marketing'
+    | '/industries'
+    | '/services'
   id:
-  | '__root__'
-  | '/'
-  | '/about'
-  | '/contact'
-  | '/industries'
-  | '/services'
-  | '/services/social-media-digital-marketing'
-  | '/testimonials'
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/agreements'
+    | '/business-development'
+    | '/contact'
+    | '/lead-generation'
+    | '/testimonials'
+    | '/industries/$slug'
+    | '/services/social-media-digital-marketing'
+    | '/industries/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AgreementsRoute: typeof AgreementsRoute
+  BusinessDevelopmentRoute: typeof BusinessDevelopmentRoute
   ContactRoute: typeof ContactRoute
-  IndustriesRoute: typeof IndustriesRoute
-  ServicesRoute: typeof ServicesRoute
-  SocialMediaDigitalMarketingRoute: typeof SocialMediaDigitalMarketingRoute
+  LeadGenerationRoute: typeof LeadGenerationRoute
   TestimonialsRoute: typeof TestimonialsRoute
+  IndustriesSlugRoute: typeof IndustriesSlugRoute
+  ServicesSocialMediaDigitalMarketingRoute: typeof ServicesSocialMediaDigitalMarketingRoute
+  IndustriesIndexRoute: typeof IndustriesIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -130,25 +183,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TestimonialsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-      '/services/social-media-digital-marketing': {
-  id: '/services/social-media-digital-marketing'
-  path: '/services/social-media-digital-marketing'
-  fullPath: '/services/social-media-digital-marketing'
-  preLoaderRoute: typeof SocialMediaDigitalMarketingRouteImport
-  parentRoute: typeof rootRouteImport
-}
-    }
-    '/industries': {
-      id: '/industries'
-      path: '/industries'
-      fullPath: '/industries'
-      preLoaderRoute: typeof IndustriesRouteImport
+    '/lead-generation': {
+      id: '/lead-generation'
+      path: '/lead-generation'
+      fullPath: '/lead-generation'
+      preLoaderRoute: typeof LeadGenerationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -156,6 +195,20 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-development': {
+      id: '/business-development'
+      path: '/business-development'
+      fullPath: '/business-development'
+      preLoaderRoute: typeof BusinessDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agreements': {
+      id: '/agreements'
+      path: '/agreements'
+      fullPath: '/agreements'
+      preLoaderRoute: typeof AgreementsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -172,17 +225,50 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/': {
+      id: '/industries/'
+      path: '/industries'
+      fullPath: '/industries/'
+      preLoaderRoute: typeof IndustriesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/social-media-digital-marketing': {
+      id: '/services/social-media-digital-marketing'
+      path: '/services/social-media-digital-marketing'
+      fullPath: '/services/social-media-digital-marketing'
+      preLoaderRoute: typeof ServicesSocialMediaDigitalMarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/$slug': {
+      id: '/industries/$slug'
+      path: '/industries/$slug'
+      fullPath: '/industries/$slug'
+      preLoaderRoute: typeof IndustriesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AgreementsRoute: AgreementsRoute,
+  BusinessDevelopmentRoute: BusinessDevelopmentRoute,
   ContactRoute: ContactRoute,
-  IndustriesRoute: IndustriesRoute,
-  ServicesRoute: ServicesRoute,
-  SocialMediaDigitalMarketingRoute: SocialMediaDigitalMarketingRoute,
+  LeadGenerationRoute: LeadGenerationRoute,
   TestimonialsRoute: TestimonialsRoute,
+  IndustriesSlugRoute: IndustriesSlugRoute,
+  ServicesSocialMediaDigitalMarketingRoute:
+    ServicesSocialMediaDigitalMarketingRoute,
+  IndustriesIndexRoute: IndustriesIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

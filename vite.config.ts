@@ -15,8 +15,14 @@ export default defineConfig({
   plugins: [
     tsConfigPaths(),
     tailwindcss(),
-    tanstackStart({ server: { entry: "server" } }),
-    nitro(),
-    viteReact(),
+   tanstackStart({
+  server: { entry: "server" },
+  prerender: {
+    enabled: true,
+    crawlLinks: true,
+  },
+}),
+nitro(),
+viteReact(),
   ],
 });

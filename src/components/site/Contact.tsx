@@ -195,7 +195,7 @@ export function Contact() {
 
                 <button
                   type="submit"
-                  className="group inline-flex items-center gap-3 rounded-full bg-[#EE8021] px-10 py-5 font-semibold text-[#071330] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                 className="group inline-flex items-center gap-3 rounded-full bg-[#EE8021] px-10 py-5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                 >
                   Schedule Consultation
                   <ArrowUpRight size={20} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
