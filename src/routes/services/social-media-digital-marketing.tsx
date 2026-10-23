@@ -6,9 +6,7 @@ import { ScrollToTop } from "@/components/site/ScrollToTop";
 import marketingTechImage from "@/assets/images/exploring-social-media-technology.webp";
 import { PAGE_X } from "@/lib/utils";
 
-export const Route = createFileRoute(
-  "/services/social-media-digital-marketing"
-)({
+export const Route = createFileRoute("/services/social-media-digital-marketing")({
   head: () => ({
     meta: [
       { title: "Social Media & Digital Marketing — Legacy Digitronics" },
@@ -114,10 +112,9 @@ function SocialMediaDigitalMarketing() {
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy/80">
-                We build high-performing digital marketing programs that
-                increase brand visibility, generate qualified leads, and
-                accelerate business growth through integrated organic and
-                paid strategies.
+                We build high-performing digital marketing programs that increase brand visibility,
+                generate qualified leads, and accelerate business growth through integrated organic
+                and paid strategies.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -153,12 +150,8 @@ function SocialMediaDigitalMarketing() {
                     key={s.label}
                     className="rounded-2xl border border-white/60 bg-white/70 p-5 text-center shadow-sm backdrop-blur-xl"
                   >
-                    <p className="text-3xl font-bold text-navy">
-                      {s.value}
-                    </p>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      {s.label}
-                    </p>
+                    <p className="text-3xl font-bold text-navy">{s.value}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">{s.label}</p>
                   </div>
                 ))}
               </motion.div>
@@ -201,9 +194,7 @@ function SocialMediaDigitalMarketing() {
             transition={{ duration: 0.7, ease }}
             className="max-w-2xl"
           >
-            <p className="text-xs uppercase tracking-[0.28em] text-gold">
-              Key Capabilities
-            </p>
+            <p className="text-xs uppercase tracking-[0.28em] text-gold">Key Capabilities</p>
             <h2 className="mt-4 text-4xl leading-tight text-navy sm:text-5xl">
               Everything your growth engine needs.
             </h2>
@@ -227,9 +218,7 @@ function SocialMediaDigitalMarketing() {
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold">
                   <CheckCircle2 className="h-5 w-5" />
                 </div>
-                <h3 className="mt-5 text-lg text-navy">
-                  {cap.title}
-                </h3>
+                <h3 className="mt-5 text-lg text-navy">{cap.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
                   {cap.description}
                 </p>
@@ -243,9 +232,7 @@ function SocialMediaDigitalMarketing() {
       <section className="border-y border-border bg-secondary/40 py-24">
         <div className={PAGE_X}>
           <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.28em] text-gold">
-              Why Legacy
-            </p>
+            <p className="text-xs uppercase tracking-[0.28em] text-gold">Why Legacy</p>
             <h2 className="mt-4 text-3xl leading-tight text-navy sm:text-4xl">
               A marketing team that reports to your pipeline, not vanity metrics.
             </h2>
@@ -275,12 +262,8 @@ function SocialMediaDigitalMarketing() {
                 className="rounded-2xl border border-border bg-card p-8"
                 style={{ boxShadow: "var(--shadow-elegant)" }}
               >
-                <h3 className="text-xl text-navy-deep">
-                  {f.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {f.body}
-                </p>
+                <h3 className="text-xl text-navy-deep">{f.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
               </motion.div>
             ))}
           </div>
@@ -301,9 +284,7 @@ function SocialMediaDigitalMarketing() {
             />
             <div className="relative flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
               <div>
-                <div className="text-xs uppercase tracking-[0.28em] text-gold">
-                  Ready to grow?
-                </div>
+                <div className="text-xs uppercase tracking-[0.28em] text-gold">Ready to grow?</div>
                 <h3 className="mt-3 max-w-xl text-3xl leading-tight text-navy-deep sm:text-4xl">
                   Let's build a marketing engine that compounds.
                 </h3>
@@ -326,11 +307,10 @@ function SocialMediaDigitalMarketing() {
       </section>
 
       <footer className="border-t border-border bg-background py-10">
-        <div className={`flex flex-col items-center justify-between gap-4 text-center text-sm text-muted-foreground md:flex-row md:text-left ${PAGE_X}`}>
-          <div>
-            © {new Date().getFullYear()} Legacy Digitronics Pvt. Ltd. All
-            rights reserved.
-          </div>
+        <div
+          className={`flex flex-col items-center justify-between gap-4 text-center text-sm text-muted-foreground md:flex-row md:text-left ${PAGE_X}`}
+        >
+          <div>© {new Date().getFullYear()} Legacy Digitronics Pvt. Ltd. All rights reserved.</div>
           <div className="tracking-wide">Crafted with precision · Since 2004</div>
         </div>
       </footer>

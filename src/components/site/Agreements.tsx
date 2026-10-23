@@ -48,9 +48,8 @@ export function Agreements() {
               </div>
 
               <p className="mt-8 max-w-3xl text-lg leading-8 text-gray-600">
-                This Service Level Agreement establishes the terms and
-                conditions for dedicated full-time research support services
-                provided by Legacy Group International.
+                This Service Level Agreement establishes the terms and conditions for dedicated
+                full-time research support services provided by Legacy Group International.
               </p>
             </motion.div>
           </div>
@@ -70,34 +69,32 @@ export function Agreements() {
               <div className="border-b border-gray-200 p-8 md:p-12 lg:p-14">
                 <div className="max-w-5xl space-y-6 text-base leading-8 text-[#071330]">
                   <p>
-                    This Agreement is entered into by and between Legacy Group
-                    International dba as “Legacy Digitronics Pvt. Ltd.” and the
-                    subscribing party “customer”, collectively referred
-                    to as the “parties.”
+                    This Agreement is entered into by and between Legacy Group International dba as
+                    “Legacy Digitronics Pvt. Ltd.” and the subscribing party “customer”,
+                    collectively referred to as the “parties.”
                   </p>
 
                   <p>
-  By clicking{" "}
-  <a
-    href="https://buy.stripe.com/5kA9BTczk7mM51eeZW"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-semibold text-orange-500 hover:underline"
-  >
-    Click Here to Pay / Subscribe
-  </a>
-  , the Customer agrees to enter into this Service Agreement Subscription
-  digitally...
-</p>
+                    By clicking{" "}
+                    <a
+                      href="https://buy.stripe.com/5kA9BTczk7mM51eeZW"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-orange-500 hover:underline"
+                    >
+                      Click Here to Pay / Subscribe
+                    </a>
+                    , the Customer agrees to enter into this Service Agreement Subscription
+                    digitally...
+                  </p>
                 </div>
               </div>
 
               {/* 1. Service Scope */}
               <AgreementSection number="1" title="Service Scope">
                 <p>
-                  Legacy Group shall provide the Customer with dedicated
-                  researchers/teams/virtual assistants to perform services
-                  including, but not limited to:
+                  Legacy Group shall provide the Customer with dedicated researchers/teams/virtual
+                  assistants to perform services including, but not limited to:
                 </p>
 
                 <BulletList items={serviceScope} />
@@ -109,26 +106,24 @@ export function Agreements() {
                 title="Full-Time Research Support Service, Subscription and Pricing"
               >
                 <Clause number="2.1">
-                  The Full-time research support services are non-refundable,
-                  subscription-based, and payable in advance via auto-debit
-                  payment systems.
+                  The Full-time research support services are non-refundable, subscription-based,
+                  and payable in advance via auto-debit payment systems.
                 </Clause>
 
                 <Clause number="2.2">
-                  The Full-Time Subscription Plan comprises 160 hours of
-                  research support per month at a rate of USD $1200/month.
+                  The Full-Time Subscription Plan comprises 160 hours of research support per month
+                  at a rate of USD $1200/month.
                 </Clause>
 
                 <Clause number="2.3">
-                  The Customer agrees to provide a minimum of 160 hours of work
-                  per month, as a customary obligation.
+                  The Customer agrees to provide a minimum of 160 hours of work per month, as a
+                  customary obligation.
                 </Clause>
 
                 <Clause number="2.4">
-                  In the event the Customer fails to provide or assign a
-                  minimum of 160 hours of work in any given month, the monthly
-                  subscription fee shall remain unaffected. A flat fee of USD
-                  $1200 per month will continue to be billed to the Customer
+                  In the event the Customer fails to provide or assign a minimum of 160 hours of
+                  work in any given month, the monthly subscription fee shall remain unaffected. A
+                  flat fee of USD $1200 per month will continue to be billed to the Customer
                   irrespective of the actual hours of work assigned.
                 </Clause>
 
@@ -136,158 +131,127 @@ export function Agreements() {
                   Legacy Group shall provide:
                   <ul className="mt-4 list-disc space-y-2 pl-6">
                     <li>Daily email status updates</li>
-                    <li>
-                      Monthly time sheets detailing hours worked and tasks
-                      performed
-                    </li>
+                    <li>Monthly time sheets detailing hours worked and tasks performed</li>
                   </ul>
                 </Clause>
               </AgreementSection>
 
-              
-
               {/* 3. Customer Responsibilities */}
-              <AgreementSection
-                number="3"
-                title="Customer Responsibilities and Logistics"
-              >
+              <AgreementSection number="3" title="Customer Responsibilities and Logistics">
                 <Clause number="3.1">
-                  The Customer shall provide all necessary access to job boards,
-                  databases, CRMs/ATS systems, and any other licensed or
-                  proprietary platforms required to perform assigned tasks.
+                  The Customer shall provide all necessary access to job boards, databases, CRMs/ATS
+                  systems, and any other licensed or proprietary platforms required to perform
+                  assigned tasks.
                 </Clause>
 
-                <Clause number="3.2">
-                  Payments must be made in advance on a monthly basis.
-                </Clause>
+                <Clause number="3.2">Payments must be made in advance on a monthly basis.</Clause>
 
                 <Clause number="3.3">
-                  This Agreement has a minimum term of three (3) months. Upon
-                  completion of the initial three-month period, the subscription
-                  may be cancelled by either Party with a minimum of one (1)
-                  month’s written notice.
+                  This Agreement has a minimum term of three (3) months. Upon completion of the
+                  initial three-month period, the subscription may be cancelled by either Party with
+                  a minimum of one (1) month’s written notice.
                 </Clause>
 
                 <Clause number="3.4">
-                  Legacy Group shall address and resolve any performance or
-                  quality-related issues reported by the Customer in a timely
-                  manner.
+                  Legacy Group shall address and resolve any performance or quality-related issues
+                  reported by the Customer in a timely manner.
                 </Clause>
               </AgreementSection>
 
               {/* 4. Confidentiality */}
-              <AgreementSection
-                number="4"
-                title="Confidentiality and Data Security"
-              >
+              <AgreementSection number="4" title="Confidentiality and Data Security">
                 <Clause number="4.1">
-                  Legacy Group shall maintain strict confidentiality regarding
-                  all information, data, and materials received from the
-                  Customer and shall not disclose, share, or use such
-                  information except for the execution of agreed services.
+                  Legacy Group shall maintain strict confidentiality regarding all information,
+                  data, and materials received from the Customer and shall not disclose, share, or
+                  use such information except for the execution of agreed services.
                 </Clause>
 
                 <Clause number="4.2">
-                  Any breach of confidentiality shall constitute grounds for
-                  immediate termination of this Agreement.
+                  Any breach of confidentiality shall constitute grounds for immediate termination
+                  of this Agreement.
                 </Clause>
 
                 <Clause number="4.3">
-                  Legacy Group employs robust cybersecurity protocols, including
-                  UNIX-based secured networks, monitored staff email and
-                  activity tracking, and ERP-controlled access to Customer
-                  resources.
+                  Legacy Group employs robust cybersecurity protocols, including UNIX-based secured
+                  networks, monitored staff email and activity tracking, and ERP-controlled access
+                  to Customer resources.
                 </Clause>
 
                 <Clause number="4.4">
-                  For platforms such as LinkedIn Recruiter, access shall be
-                  facilitated through secure remote desktops to avoid direct
-                  credential sharing.
+                  For platforms such as LinkedIn Recruiter, access shall be facilitated through
+                  secure remote desktops to avoid direct credential sharing.
                 </Clause>
               </AgreementSection>
 
               {/* 5. Non-Competition */}
-              <AgreementSection
-                number="5"
-                title="Non-Competition and Non-Solicitation"
-              >
+              <AgreementSection number="5" title="Non-Competition and Non-Solicitation">
                 <Clause number="5.1">
-                  Legacy Group shall not engage in any business activities that
-                  directly or indirectly compete with the Customer’s line of
-                  business.
+                  Legacy Group shall not engage in any business activities that directly or
+                  indirectly compete with the Customer’s line of business.
                 </Clause>
 
                 <Clause number="5.2">
-                  The Customer shall not solicit or engage (directly or
-                  indirectly) with current or former employees of Legacy Group
-                  for employment, consultancy, or business dealings without
-                  prior written consent of Legacy Group.
+                  The Customer shall not solicit or engage (directly or indirectly) with current or
+                  former employees of Legacy Group for employment, consultancy, or business dealings
+                  without prior written consent of Legacy Group.
                 </Clause>
 
                 <Clause number="5.3">
-                  Both Parties mutually agree to honour this non-competition
-                  and non-solicitation clause.
+                  Both Parties mutually agree to honour this non-competition and non-solicitation
+                  clause.
                 </Clause>
 
                 <Clause number="5.4">
-                  A breach of this clause by either Party shall render the
-                  breaching Party liable to pay liquidated damages of INR
-                  25,00,000/- (Twenty-Five Lakhs, approx. USD $30,000).
+                  A breach of this clause by either Party shall render the breaching Party liable to
+                  pay liquidated damages of INR 25,00,000/- (Twenty-Five Lakhs, approx. USD
+                  $30,000).
                 </Clause>
               </AgreementSection>
 
               {/* 6. Termination */}
-              <AgreementSection
-                number="6"
-                title="Subscription Terms and Termination"
-              >
+              <AgreementSection number="6" title="Subscription Terms and Termination">
                 <Clause number="6.1">
-                  This Agreement shall become effective on the date of
-                  subscription and shall remain in force for three (3) months.
+                  This Agreement shall become effective on the date of subscription and shall remain
+                  in force for three (3) months.
                 </Clause>
 
                 <Clause number="6.2">
-                  Either Party may terminate the Agreement after the completion
-                  of the initial term, i.e. 3 months, with one (1) month’s
-                  written notice.
+                  Either Party may terminate the Agreement after the completion of the initial term,
+                  i.e. 3 months, with one (1) month’s written notice.
                 </Clause>
 
                 <Clause number="6.3">
-                  Legacy Group shall complete all ongoing tasks or projects
-                  during the notice period.
+                  Legacy Group shall complete all ongoing tasks or projects during the notice
+                  period.
                 </Clause>
 
                 <Clause number="6.4">
-                  In the event of payment default, the Customer expressly
-                  authorizes Legacy Group to charge any outstanding dues
-                  directly to the Customer’s credit card on record and agrees to
-                  pay any legal expenditure incurred by Legacy Group in the
-                  process of recovering any outstanding dues.
+                  In the event of payment default, the Customer expressly authorizes Legacy Group to
+                  charge any outstanding dues directly to the Customer’s credit card on record and
+                  agrees to pay any legal expenditure incurred by Legacy Group in the process of
+                  recovering any outstanding dues.
                 </Clause>
               </AgreementSection>
 
               {/* 7. No Refund */}
               <AgreementSection number="7" title="No Refund Policy">
-                <Clause number="7.1">
-                  There will not be any refund issued to the customers.
-                </Clause>
+                <Clause number="7.1">There will not be any refund issued to the customers.</Clause>
 
                 <Clause number="7.2">
-                  Any subscription payments made by the customers will be
-                  traded against services only.
+                  Any subscription payments made by the customers will be traded against services
+                  only.
                 </Clause>
 
                 <Clause number="7.3">
-                  Legacy Group will pay attention to any customary issued
-                  reported in writing and provide resolutions in timely manner,
-                  as far as the customary issues are under the service scope as
-                  per this service agreement.
+                  Legacy Group will pay attention to any customary issued reported in writing and
+                  provide resolutions in timely manner, as far as the customary issues are under the
+                  service scope as per this service agreement.
                 </Clause>
 
                 <Clause number="7.4">
-                  The customer agrees to resolve any dispute working with
-                  Legacy Group and won’t attempt any charge backs to their
-                  credit cards as per this written No Refund Policy.
+                  The customer agrees to resolve any dispute working with Legacy Group and won’t
+                  attempt any charge backs to their credit cards as per this written No Refund
+                  Policy.
                 </Clause>
               </AgreementSection>
 
@@ -299,9 +263,7 @@ export function Agreements() {
                       Legacy Group International
                     </p>
 
-                    <p className="mt-3 text-lg font-semibold">
-                      Intelligent Business Solutions
-                    </p>
+                    <p className="mt-3 text-lg font-semibold">Intelligent Business Solutions</p>
 
                     <p className="mt-4 leading-7 text-gray-200">
                       1252, Turnbury Lane,
@@ -311,9 +273,7 @@ export function Agreements() {
                       USA
                     </p>
 
-                    <p className="mt-4 text-gray-200">
-                      Phone: +1 (215) 458-6729
-                    </p>
+                    <p className="mt-4 text-gray-200">Phone: +1 (215) 458-6729</p>
                   </div>
 
                   <div>
@@ -329,9 +289,7 @@ export function Agreements() {
                       Vadodara, Gujarat – 390010
                     </p>
 
-                    <p className="mt-4 text-gray-200">
-                      Phone: +91 (265) 263-4480
-                    </p>
+                    <p className="mt-4 text-gray-200">Phone: +91 (265) 263-4480</p>
                   </div>
                 </div>
 
@@ -366,26 +324,16 @@ function AgreementSection({
         </div>
 
         <div className="min-w-0 flex-1">
-          <h2 className="text-2xl font-bold text-[#071330] md:text-3xl">
-            {title}
-          </h2>
+          <h2 className="text-2xl font-bold text-[#071330] md:text-3xl">{title}</h2>
 
-          <div className="mt-6 space-y-6 text-base leading-8 text-[#071330]">
-            {children}
-          </div>
+          <div className="mt-6 space-y-6 text-base leading-8 text-[#071330]">{children}</div>
         </div>
       </div>
     </section>
   );
 }
 
-function Clause({
-  number,
-  children,
-}: {
-  number: string;
-  children: React.ReactNode;
-}) {
+function Clause({ number, children }: { number: string; children: React.ReactNode }) {
   return (
     <div className="rounded-2xl border border-gray-100 bg-[#FAFAF8] p-5 md:p-6 text-[#071330]">
       <p>
@@ -400,10 +348,7 @@ function BulletList({ items }: { items: string[] }) {
   return (
     <ul className="mt-5 grid gap-3 sm:grid-cols-2">
       {items.map((item) => (
-        <li
-          key={item}
-          className="rounded-xl border border-gray-100 bg-[#FAFAF8] px-5 py-4"
-        >
+        <li key={item} className="rounded-xl border border-gray-100 bg-[#FAFAF8] px-5 py-4">
           <span className="mr-3 font-bold text-[#EE8021]">•</span>
           {item}
         </li>
@@ -417,9 +362,7 @@ function AgreementContact() {
     <div className="border-b border-gray-200 bg-[#FAFAF8] px-8 py-8 md:px-12 lg:px-14">
       <div className="grid gap-8 md:grid-cols-2">
         <div>
-          <p className="font-semibold text-[#071330]">
-            Legacy Group International
-          </p>
+          <p className="font-semibold text-[#071330]">Legacy Group International</p>
           <p className="mt-2 text-sm leading-6 text-[#071330]">
             Intelligent Business Solutions
             <br />

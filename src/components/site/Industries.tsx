@@ -11,9 +11,7 @@ const ease = [0.22, 1, 0.36, 1];
 
 // Keep a stable, alphabetically-sorted copy so the grid always renders A → Z
 // regardless of the order items are defined in the data file.
-const sortedIndustries = [...industries].sort((a, b) =>
-  a.name.localeCompare(b.name)
-);
+const sortedIndustries = [...industries].sort((a, b) => a.name.localeCompare(b.name));
 
 export function Industries() {
   return (
@@ -35,7 +33,9 @@ export function Industries() {
           />
         </div>
 
-        <div className={`grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16 ${PAGE_X}`}>
+        <div
+          className={`grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16 ${PAGE_X}`}
+        >
           <div className="max-w-2xl">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -60,10 +60,10 @@ export function Industries() {
             >
               At Legacy India, we serve a range of industries with expertise and commitment. From
               recruitment and market research outsourcing to business process support, we tailor our
-              services to meet the specific needs of each sector. With years of experience and a deep
-              understanding of industry demands, we help organizations streamline processes, improve
-              performance, and achieve growth. Explore how our specialized solutions can benefit your
-              industry.
+              services to meet the specific needs of each sector. With years of experience and a
+              deep understanding of industry demands, we help organizations streamline processes,
+              improve performance, and achieve growth. Explore how our specialized solutions can
+              benefit your industry.
             </motion.p>
           </div>
 
@@ -120,7 +120,9 @@ export function Industries() {
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
                   </div>
                   <div className="relative flex items-center justify-between p-6">
-                    <h3 className="font-sans text-lg font-semibold tracking-tight text-navy">{ind.name}</h3>
+                    <h3 className="font-sans text-lg font-semibold tracking-tight text-navy">
+                      {ind.name}
+                    </h3>
                     <ArrowUpRight className="h-5 w-5 text-navy/30 transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-navy" />
                   </div>
                 </motion.article>
@@ -143,33 +145,41 @@ export function Industries() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600 text-justify">
-              From engineering and manufacturing to healthcare, finance,
-              energy and technology, Legacy Group International helps
-              organizations build stronger teams and accelerate business growth.
+              From engineering and manufacturing to healthcare, finance, energy and technology,
+              Legacy Group International helps organizations build stronger teams and accelerate
+              business growth.
             </p>
           </div>
 
           <div className="mt-16 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-8">
             <div className="rounded-3xl border border-gray-200 bg-white p-5 text-center shadow-lg transition hover:-translate-y-2 hover:shadow-2xl sm:p-6 lg:p-8">
               <h3 className="font-sans text-3xl font-bold text-[#071330] sm:text-4xl lg:text-5xl">
-  20+
-</h3>
-              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-gray-500 sm:tracking-[0.18em] lg:text-sm lg:tracking-[0.25em]">Industries</p>
+                20+
+              </h3>
+              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-gray-500 sm:tracking-[0.18em] lg:text-sm lg:tracking-[0.25em]">
+                Industries
+              </p>
             </div>
 
             <div className="rounded-3xl border border-gray-200 bg-white p-5 text-center shadow-lg transition hover:-translate-y-2 hover:shadow-2xl sm:p-6 lg:p-8">
               <h3 className="text-3xl font-sans text-[#071330] sm:text-4xl lg:text-5xl">150+</h3>
-              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-gray-500 sm:tracking-[0.18em] lg:text-sm lg:tracking-[0.25em]">Global Clients</p>
+              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-gray-500 sm:tracking-[0.18em] lg:text-sm lg:tracking-[0.25em]">
+                Global Clients
+              </p>
             </div>
 
             <div className="rounded-3xl border border-gray-200 bg-white p-5 text-center shadow-lg transition hover:-translate-y-2 hover:shadow-2xl sm:p-6 lg:p-8">
               <h3 className="text-3xl font-sans text-[#071330] sm:text-4xl lg:text-5xl">98%</h3>
-              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-gray-500 sm:tracking-[0.18em] lg:text-sm lg:tracking-[0.25em]">Client Retention</p>
+              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-gray-500 sm:tracking-[0.18em] lg:text-sm lg:tracking-[0.25em]">
+                Client Retention
+              </p>
             </div>
 
             <div className="rounded-3xl border border-gray-200 bg-white p-5 text-center shadow-lg transition hover:-translate-y-2 hover:shadow-2xl sm:p-6 lg:p-8">
               <h3 className="text-3xl font-sans text-[#071330] sm:text-4xl lg:text-5xl">30+</h3>
-              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-gray-500 sm:tracking-[0.18em] lg:text-sm lg:tracking-[0.25em]">Countries</p>
+              <p className="mt-3 text-xs uppercase tracking-[0.12em] text-gray-500 sm:tracking-[0.18em] lg:text-sm lg:tracking-[0.25em]">
+                Countries
+              </p>
             </div>
           </div>
         </div>
@@ -265,9 +275,9 @@ export function Industries() {
                 </h3>
               </div>
               <a
-  href="https://calendly.com/raj-kapoor"
-  target="_blank"
-  rel="noopener noreferrer"
+                href="https://calendly.com/raj-kapoor"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex shrink-0 items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white shadow-(--shadow-gold) transition-transform hover:-translate-y-0.5"
                 style={{ backgroundImage: "var(--gradient-gold)" }}
               >
@@ -280,9 +290,10 @@ export function Industries() {
       </section>
 
       <footer className="border-t border-border bg-background py-10">
-        <div className={`flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row ${PAGE_X}`}>
+        <div
+          className={`flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row ${PAGE_X}`}
+        >
           <div>© {new Date().getFullYear()} Legacy Digitronics Pvt. Ltd. All rights reserved.</div>
-         
         </div>
       </footer>
 

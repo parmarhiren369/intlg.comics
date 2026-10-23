@@ -21,10 +21,7 @@ function useCountUp(end: number, duration = 2000, start = false) {
 
     const step = (timestamp: number) => {
       if (startTimeRef.current === null) startTimeRef.current = timestamp;
-      const progress = Math.min(
-        (timestamp - startTimeRef.current) / duration,
-        1
-      );
+      const progress = Math.min((timestamp - startTimeRef.current) / duration, 1);
       setValue(Math.floor(progress * end));
       if (progress < 1) {
         frame = requestAnimationFrame(step);
@@ -58,9 +55,7 @@ function RevenueGrowthCard() {
         +{count}%
       </h3>
 
-      <p className="mt-2 text-sm text-slate-500">
-        Average client pipeline growth
-      </p>
+      <p className="mt-2 text-sm text-slate-500">Average client pipeline growth</p>
     </motion.div>
   );
 }
@@ -76,7 +71,9 @@ function LeadGeneration() {
 
         {/* Content */}
         <div className="relative z-10">
-          <div className={`grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 ${PAGE_X}`}>
+          <div
+            className={`grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 ${PAGE_X}`}
+          >
             {/* LEFT SIDE */}
             <div className="max-w-3xl text-slate-900">
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#EE8021]">
@@ -116,9 +113,9 @@ function LeadGeneration() {
               </div>
 
               <p className="mt-8 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg sm:leading-9 lg:text-xl">
-                Generate qualified leads, accelerate your sales pipeline, and
-                connect with decision-makers through AI-powered research,
-                precision targeting, and multi-channel outreach campaigns.
+                Generate qualified leads, accelerate your sales pipeline, and connect with
+                decision-makers through AI-powered research, precision targeting, and multi-channel
+                outreach campaigns.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4 sm:mt-10">
@@ -145,27 +142,19 @@ function LeadGeneration() {
                 <div className="grid grid-cols-2 gap-5">
                   <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-lg">
                     <p className="text-sm text-slate-500">Qualified Leads</p>
-                    <h4 className="mt-3 font-sans text-3xl font-semibold text-slate-900">
-                      15K+
-                    </h4>
+                    <h4 className="mt-3 font-sans text-3xl font-semibold text-slate-900">15K+</h4>
                   </div>
 
                   <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-lg">
                     <p className="text-sm text-slate-500">Meetings</p>
-                    <h4 className="mt-3 font-sans text-3xl font-semibold text-slate-900">
-                      3.5K+
-                    </h4>
+                    <h4 className="mt-3 font-sans text-3xl font-semibold text-slate-900">3.5K+</h4>
                   </div>
                 </div>
 
                 <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-500">
-                      Email Deliverability
-                    </span>
-                    <span className="font-sans font-semibold text-green-600">
-                      98.4%
-                    </span>
+                    <span className="text-sm text-slate-500">Email Deliverability</span>
+                    <span className="font-sans font-semibold text-green-600">98.4%</span>
                   </div>
 
                   <div className="mt-4 h-3 rounded-full bg-slate-200">

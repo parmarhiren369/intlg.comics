@@ -2,7 +2,18 @@ import { Nav } from "./Nav";
 import { ScrollToTop } from "./ScrollToTop";
 import { Footer } from "./Footer";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, ArrowUpRight, ArrowRight, ShieldCheck, Globe, Users, Award } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ArrowUpRight,
+  ArrowRight,
+  ShieldCheck,
+  Globe,
+  Users,
+  Award,
+} from "lucide-react";
 import contactHero from "@/assets/images/contact-hero.webp";
 import { PAGE_X } from "@/lib/utils";
 
@@ -26,10 +37,26 @@ const contactLocations = [
 ];
 
 const whyChooseUs = [
-  { icon: ShieldCheck, title: "20+ Years Experience", description: "Trusted outsourcing partner since 2005." },
-  { icon: Globe, title: "Global Delivery", description: "Serving businesses across multiple industries worldwide." },
-  { icon: Users, title: "Expert Team", description: "Recruitment, Research, Technology and BPO specialists." },
-  { icon: Award, title: "98% Client Retention", description: "Long-term partnerships built on measurable results." },
+  {
+    icon: ShieldCheck,
+    title: "20+ Years Experience",
+    description: "Trusted outsourcing partner since 2005.",
+  },
+  {
+    icon: Globe,
+    title: "Global Delivery",
+    description: "Serving businesses across multiple industries worldwide.",
+  },
+  {
+    icon: Users,
+    title: "Expert Team",
+    description: "Recruitment, Research, Technology and BPO specialists.",
+  },
+  {
+    icon: Award,
+    title: "98% Client Retention",
+    description: "Long-term partnerships built on measurable results.",
+  },
 ];
 
 export function Contact() {
@@ -42,17 +69,23 @@ export function Contact() {
         <section className="relative overflow-hidden py-24 lg:py-32 w-full">
           <div className={PAGE_X}>
             <div className="grid items-center gap-16 lg:grid-cols-2">
-              <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease }}>
-                <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#EE8021]">CONTACT US</p>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease }}
+              >
+                <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#EE8021]">
+                  CONTACT US
+                </p>
 
                 <h1 className="mt-6 text-4xl font-bold leading-tight sm:text-5xl md:text-5xl xl:text-6xl">
                   Let us Start
-                  <br />
-                  a Conversation.
+                  <br />a Conversation.
                 </h1>
 
                 <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600 text-justify">
-                  Whether you are looking for recruitment, outsourcing, research, technical support, or business solutions, our team is ready to help.
+                  Whether you are looking for recruitment, outsourcing, research, technical support,
+                  or business solutions, our team is ready to help.
                 </p>
 
                 <div className="mt-10 flex gap-4">
@@ -75,13 +108,22 @@ export function Contact() {
                 </div>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.15, ease }} className="relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.15, ease }}
+                className="relative"
+              >
                 <div
                   className="overflow-hidden rounded-[28px] border border-border transition-transform duration-500 hover:-translate-y-1"
                   style={{ boxShadow: "var(--shadow-elegant)" }}
                 >
                   <div className="overflow-hidden aspect-video">
-                    <img src={contactHero} alt="Contact Legacy Group International" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
+                    <img
+                      src={contactHero}
+                      alt="Contact Legacy Group International"
+                      className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -92,7 +134,7 @@ export function Contact() {
         <section className="py-20 bg-white w-full">
           <div className={PAGE_X}>
             <div className="grid gap-6 md:grid-cols-2 xl:gap-8">
-                          {contactLocations.map((location, index) => {
+              {contactLocations.map((location, index) => {
                 const Icon = location.icon;
 
                 return (
@@ -156,7 +198,9 @@ export function Contact() {
               transition={{ duration: 0.7, ease }}
               className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl transition-shadow duration-500 hover:shadow-2xl"
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#EE8021]">CONTACT US</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#EE8021]">
+                CONTACT US
+              </p>
 
               <h2 className="mt-4 text-3xl font-bold leading-tight text-[#071330] sm:text-4xl lg:text-5xl">
                 Let us Build
@@ -165,7 +209,8 @@ export function Contact() {
               </h2>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600 text-justify">
-                Whether you are looking for recruitment, outsourcing, research, or technology solutions, our specialists are ready to help you find the right solution.
+                Whether you are looking for recruitment, outsourcing, research, or technology
+                solutions, our specialists are ready to help you find the right solution.
               </p>
 
               <form className="mt-12 space-y-6">
@@ -195,10 +240,13 @@ export function Contact() {
 
                 <button
                   type="submit"
-                 className="group inline-flex items-center gap-3 rounded-full bg-[#EE8021] px-10 py-5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                  className="group inline-flex items-center gap-3 rounded-full bg-[#EE8021] px-10 py-5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                 >
                   Schedule Consultation
-                  <ArrowUpRight size={20} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <ArrowUpRight
+                    size={20}
+                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
                 </button>
 
                 <div className="mt-8 flex items-center gap-3 text-sm text-gray-600">
@@ -233,7 +281,11 @@ export function Contact() {
                       viewport={{ once: true, margin: "-60px" }}
                       className="group relative overflow-hidden flex items-start gap-5 rounded-[28px] border border-gray-200 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-[#EE8021] hover:shadow-2xl"
                     >
-                      <div aria-hidden className="absolute inset-x-0 top-0 h-[3px] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" style={{ background: "#EE8021" }} />
+                      <div
+                        aria-hidden
+                        className="absolute inset-x-0 top-0 h-[3px] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"
+                        style={{ background: "#EE8021" }}
+                      />
 
                       <div className="relative flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-[#377589] text-white shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
                         <Icon size={30} strokeWidth={2.2} />
@@ -260,7 +312,9 @@ export function Contact() {
               transition={{ duration: 0.7, ease }}
               className="relative overflow-hidden rounded-[40px] bg-[#377589] px-8 py-20 md:px-16 text-center text-white"
             >
-              <p className="relative text-sm uppercase tracking-[0.35em] text-white">LET US BUILD TOGETHER</p>
+              <p className="relative text-sm uppercase tracking-[0.35em] text-white">
+                LET US BUILD TOGETHER
+              </p>
 
               <h2 className="relative mt-6 text-3xl font-bold sm:text-4xl lg:text-5xl">
                 Ready to Transform
@@ -269,7 +323,8 @@ export function Contact() {
               </h2>
 
               <p className="relative mx-auto mt-8 max-w-3xl text-xl text-gray-300 text-justify">
-                Partner with Legacy Group International to build smarter teams, stronger operations, and sustainable business growth.
+                Partner with Legacy Group International to build smarter teams, stronger operations,
+                and sustainable business growth.
               </p>
 
               <a

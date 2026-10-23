@@ -1,11 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Clock3,
-  Globe,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock3, Globe } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { ScrollToTop } from "@/components/site/ScrollToTop";
 import { getIndustryBySlug, industries } from "@/data/industries";
@@ -26,15 +21,13 @@ function IndustryPage() {
       <div className="min-h-screen w-full overflow-x-hidden bg-background text-foreground">
         <Nav />
         <section className="flex min-h-[70vh] flex-col items-center justify-center px-6 pt-32 text-center">
-          <p className="text-xs uppercase tracking-[0.28em] text-gold">
-            Industry not found
-          </p>
+          <p className="text-xs uppercase tracking-[0.28em] text-gold">Industry not found</p>
           <h1 className="mt-4 font-sans text-3xl text-navy-deep sm:text-4xl">
             We couldn't find that industry.
           </h1>
           <p className="mt-4 max-w-md text-muted-foreground">
-            It may have moved, or the link might be off. Browse the full list
-            of industries we serve below.
+            It may have moved, or the link might be off. Browse the full list of industries we serve
+            below.
           </p>
           <Link
             to="/industries"
@@ -125,9 +118,7 @@ function IndustryPage() {
             transition={{ duration: 0.7, ease }}
             className="max-w-2xl"
           >
-            <p className="text-xs uppercase tracking-[0.28em] text-gold">
-              What we do
-            </p>
+            <p className="text-xs uppercase tracking-[0.28em] text-gold">What we do</p>
             <h2 className="mt-4 font-sans text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
               Built for {industry.name}
             </h2>
@@ -147,9 +138,7 @@ function IndustryPage() {
                 <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#377589] text-white">
                   <CheckCircle2 className="h-5 w-5" />
                 </div>
-                <p className="pt-1.5 text-base leading-relaxed text-foreground">
-                  {area}
-                </p>
+                <p className="pt-1.5 text-base leading-relaxed text-foreground">{area}</p>
               </motion.div>
             ))}
           </div>
@@ -192,15 +181,9 @@ function IndustryPage() {
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#377589]">
                   <CheckCircle2 className="h-6 w-6 text-white" />
                 </div>
-                <p className="font-sans text-3xl font-bold text-navy sm:text-4xl">
-                  {f.k}
-                </p>
-                <p className="mt-3 text-sm font-semibold text-navy">
-                  {f.label}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {f.body}
-                </p>
+                <p className="font-sans text-3xl font-bold text-navy sm:text-4xl">{f.k}</p>
+                <p className="mt-3 text-sm font-semibold text-navy">{f.label}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
               </motion.div>
             ))}
           </div>
@@ -210,9 +193,7 @@ function IndustryPage() {
       {/* RELATED INDUSTRIES */}
       <section className="py-24">
         <div className={PAGE_X}>
-          <p className="text-xs uppercase tracking-[0.28em] text-gold">
-            Explore more
-          </p>
+          <p className="text-xs uppercase tracking-[0.28em] text-gold">Explore more</p>
           <h2 className="mt-4 font-sans text-3xl leading-tight text-navy sm:text-4xl">
             Other industries we serve
           </h2>
@@ -235,9 +216,7 @@ function IndustryPage() {
                 </div>
 
                 <div className="p-5">
-                  <h3 className="font-sans text-base font-semibold text-navy">
-                    {ind.name}
-                  </h3>
+                  <h3 className="font-sans text-base font-semibold text-navy">{ind.name}</h3>
                 </div>
               </Link>
             ))}
@@ -279,11 +258,10 @@ function IndustryPage() {
       </section>
 
       <footer className="border-t border-border bg-background py-10">
-        <div className={`flex flex-col items-center justify-between gap-4 text-center text-sm text-muted-foreground md:flex-row md:text-left ${PAGE_X}`}>
-          <div>
-            © {new Date().getFullYear()} Legacy Digitronics Pvt. Ltd. All
-            rights reserved.
-          </div>
+        <div
+          className={`flex flex-col items-center justify-between gap-4 text-center text-sm text-muted-foreground md:flex-row md:text-left ${PAGE_X}`}
+        >
+          <div>© {new Date().getFullYear()} Legacy Digitronics Pvt. Ltd. All rights reserved.</div>
           <div className="tracking-wide">Crafted with precision · Since 2005</div>
         </div>
       </footer>

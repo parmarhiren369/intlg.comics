@@ -7,22 +7,22 @@ import tsConfigPaths from "vite-tsconfig-paths";
 import path from "node:path";
 
 export default defineConfig({
-  server: { host: "::", port: 8080 },
+  server: { host: "0.0.0.0", port: 3000 },
   resolve: {
-    alias: { "@": path.resolve(__dirname, "./src") },
+    alias: { "@": path.resolve(process.cwd(), "./src") },
     dedupe: ["react", "react-dom", "@tanstack/react-router", "@tanstack/react-start"],
   },
   plugins: [
     tsConfigPaths(),
     tailwindcss(),
-   tanstackStart({
-  server: { entry: "server" },
-  prerender: {
-    enabled: true,
-    crawlLinks: true,
-  },
-}),
-nitro(),
-viteReact(),
+    tanstackStart({
+      server: { entry: "server" },
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
+      },
+    }),
+    nitro(),
+    viteReact(),
   ],
 });

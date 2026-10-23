@@ -21,10 +21,7 @@ function useCountUp(end: number, duration = 2000, start = false) {
 
     const step = (timestamp: number) => {
       if (startTimeRef.current === null) startTimeRef.current = timestamp;
-      const progress = Math.min(
-        (timestamp - startTimeRef.current) / duration,
-        1
-      );
+      const progress = Math.min((timestamp - startTimeRef.current) / duration, 1);
       setValue(Math.floor(progress * end));
       if (progress < 1) {
         frame = requestAnimationFrame(step);
@@ -64,9 +61,7 @@ function DealsClosedCard() {
         style={{ backgroundImage: "var(--gradient-gold)" }}
       />
 
-      <p className="relative text-sm font-medium text-muted-foreground">
-        Complex Deals Progressed
-      </p>
+      <p className="relative text-sm font-medium text-muted-foreground">Complex Deals Progressed</p>
 
       <h3 className="relative mt-2 font-sans text-3xl font-bold text-gold sm:text-4xl lg:text-5xl">
         {count}+
@@ -122,7 +117,9 @@ function BusinessDevelopment() {
         <div className="absolute -left-40 top-10 h-[480px] w-[480px] rounded-full bg-navy/10 blur-[140px]" />
         <div className="absolute -right-32 bottom-0 h-[420px] w-[420px] rounded-full bg-gold/15 blur-[140px]" />
 
-        <div className={`relative z-10 grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 ${PAGE_X}`}>
+        <div
+          className={`relative z-10 grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 ${PAGE_X}`}
+        >
           {/* LEFT */}
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-gold">
@@ -135,9 +132,9 @@ function BusinessDevelopment() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-foreground sm:mt-8 sm:text-lg sm:leading-9 lg:text-xl">
-              Dedicated BD teams that target your highest-value accounts,
-              build relationships with real decision-makers, and progress
-              complex, multi-stakeholder deals — not just book meetings.
+              Dedicated BD teams that target your highest-value accounts, build relationships with
+              real decision-makers, and progress complex, multi-stakeholder deals — not just book
+              meetings.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-2 sm:mt-10 sm:gap-3">
@@ -187,9 +184,7 @@ function BusinessDevelopment() {
                     className="absolute inset-x-0 top-0 h-[3px] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"
                     style={{ backgroundImage: "var(--gradient-gold)" }}
                   />
-                  <p className="relative text-sm text-muted-foreground">
-                    Named Accounts
-                  </p>
+                  <p className="relative text-sm text-muted-foreground">Named Accounts</p>
                   <h4 className="relative mt-3 font-sans text-3xl font-bold text-foreground">
                     500+
                   </h4>
@@ -204,9 +199,7 @@ function BusinessDevelopment() {
                     className="absolute inset-x-0 top-0 h-[3px] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"
                     style={{ backgroundImage: "var(--gradient-gold)" }}
                   />
-                  <p className="relative text-sm text-muted-foreground">
-                    Avg. Cycle Time
-                  </p>
+                  <p className="relative text-sm text-muted-foreground">Avg. Cycle Time</p>
                   <h4 className="relative mt-3 font-sans text-3xl font-bold text-foreground">
                     -31%
                   </h4>
@@ -223,9 +216,7 @@ function BusinessDevelopment() {
                   style={{ backgroundImage: "var(--gradient-gold)" }}
                 />
                 <div className="relative flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">
-                    Stakeholder Alignment
-                  </span>
+                  <span className="text-sm text-muted-foreground">Stakeholder Alignment</span>
                   <span className="font-sans font-semibold text-gold">94%</span>
                 </div>
 
@@ -246,12 +237,8 @@ function BusinessDevelopment() {
         <div className={`grid grid-cols-1 gap-8 sm:grid-cols-3 ${PAGE_X}`}>
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="font-sans text-3xl font-bold text-navy sm:text-4xl">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {stat.label}
-              </p>
+              <p className="font-sans text-3xl font-bold text-navy sm:text-4xl">{stat.value}</p>
+              <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -291,12 +278,8 @@ function BusinessDevelopment() {
               <span className="relative font-sans text-3xl font-bold text-gold-soft">
                 {item.step}
               </span>
-              <h3 className="relative mt-4 text-2xl font-semibold text-foreground">
-                {item.title}
-              </h3>
-              <p className="relative mt-3 leading-7 text-muted-foreground">
-                {item.description}
-              </p>
+              <h3 className="relative mt-4 text-2xl font-semibold text-foreground">{item.title}</h3>
+              <p className="relative mt-3 leading-7 text-muted-foreground">{item.description}</p>
             </motion.div>
           ))}
         </div>
@@ -309,25 +292,24 @@ function BusinessDevelopment() {
         <div className="absolute -right-32 bottom-0 h-[380px] w-[380px] rounded-full bg-gold/15 blur-[140px]" />
         <div className={`relative z-10 text-center ${PAGE_X}`}>
           <div className="mx-auto max-w-4xl">
-          <h2 className="font-display text-4xl text-foreground lg:text-5xl">
-            Ready to open doors that stay open?
-          </h2>
-          <p className="mt-6 text-lg text-muted-foreground">
-            Let's talk about which named accounts your BD team should be
-            chasing next quarter.
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="rounded-full px-8 py-4 font-semibold text-navy-deep transition-all duration-300 hover:-translate-y-1"
-              style={{
-                background: "var(--gradient-gold)",
-                boxShadow: "var(--shadow-gold)",
-              }}
-            >
-              Get in Touch
-            </Link>
-          </div>
+            <h2 className="font-display text-4xl text-foreground lg:text-5xl">
+              Ready to open doors that stay open?
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground">
+              Let's talk about which named accounts your BD team should be chasing next quarter.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="rounded-full px-8 py-4 font-semibold text-navy-deep transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  background: "var(--gradient-gold)",
+                  boxShadow: "var(--shadow-gold)",
+                }}
+              >
+                Get in Touch
+              </Link>
+            </div>
           </div>
         </div>
       </section>

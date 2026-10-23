@@ -215,7 +215,12 @@ Key Capabilities
 
 const highlights = [
   { icon: Award, k: "20+", label: "Years of excellence", hint: "Trusted since 2005" },
-  { icon: Clock,k: "24 × 7 × 365", label: "Always-on operations", hint: "Follow-the-sun delivery" },
+  {
+    icon: Clock,
+    k: "24 × 7 × 365",
+    label: "Always-on operations",
+    hint: "Follow-the-sun delivery",
+  },
   { icon: Globe2, k: "3", label: "Continents", hint: "Global delivery centers" },
   { icon: Sparkles, k: "98%", label: "Client retention", hint: "Outcome-first partnerships" },
 ];
@@ -252,8 +257,7 @@ const categoryFeature: Record<string, { image: string; caption: string; sub: str
   },
 };
 
-const HERO_VIDEO =
-  "https://videos.pexels.com/video-files/3252773/3252773-hd_1920_1080_25fps.mp4";
+const HERO_VIDEO = "https://videos.pexels.com/video-files/3252773/3252773-hd_1920_1080_25fps.mp4";
 
 // Maps each service card's `key` to the route it should navigate to.
 // Add new entries here as you build out more service pages.
@@ -307,8 +311,7 @@ export function Services() {
     const navEl = document.querySelector("nav") as HTMLElement | null;
     const headerHeight = navEl?.getBoundingClientRect().height || MAIN_NAV_HEIGHT;
 
-    const y =
-      el.getBoundingClientRect().top + window.scrollY - headerHeight;
+    const y = el.getBoundingClientRect().top + window.scrollY - headerHeight;
 
     window.scrollTo({ top: y, behavior: "smooth" });
   };
@@ -318,7 +321,10 @@ export function Services() {
       <Nav />
 
       {/* HERO */}
-      <section ref={heroRef} className="relative isolate overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-32">
+      <section
+        ref={heroRef}
+        className="relative isolate overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-32"
+      >
         <div aria-hidden className="absolute inset-0 -z-10">
           <img
             src={servicesHero}
@@ -346,14 +352,11 @@ export function Services() {
             className="max-w-4xl"
           >
             <h1 className="mt-6 text-4xl leading-[1.05] text-navy-deep sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
-              Several service lines.{" "}
-              <span className="text-[#EE8021]">
-                One operating partner.
-              </span>
+              Several service lines. <span className="text-[#EE8021]">One operating partner.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#071330] text-justify">
-              From talent and growth to data, marketing and technology — Legacy engineers the outsourced
-              operating layer that lets enterprises move faster without breaking.
+              From talent and growth to data, marketing and technology — Legacy engineers the
+              outsourced operating layer that lets enterprises move faster without breaking.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -449,8 +452,8 @@ export function Services() {
               Two decades of quiet, relentless execution.
             </h2>
             <p className="mt-6 text-xl font-medium leading-relaxed text-black text-justify">
-              We're the operators behind the operators — measured, methodical and available every hour of
-              every day the business needs us.
+              We're the operators behind the operators — measured, methodical and available every
+              hour of every day the business needs us.
             </p>
           </motion.div>
 
@@ -490,7 +493,9 @@ export function Services() {
                     <f.icon className="h-5 w-5" />
                   </div>
                   <h3 className="mt-6 font-sans font-semibold text-xl text-navy-deep">{f.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground text-justify">{f.body}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground text-justify">
+                    {f.body}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -514,13 +519,15 @@ export function Services() {
           >
             <div className="relative flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
               <div>
-                <div className="text-xs uppercase tracking-[0.28em] text-[#EE7F23]">Ready when you are</div>
+                <div className="text-xs uppercase tracking-[0.28em] text-[#EE7F23]">
+                  Ready when you are
+                </div>
                 <h3 className="mt-3 max-w-xl font-display text-3xl leading-tight text-navy-deep sm:text-4xl">
                   Design the outsourced operating layer for your next chapter.
                 </h3>
                 <p className="mt-4 max-w-lg text-sm text-muted-foreground text-justify">
-                  A 30-minute working session with our solution architects — no slides, just a look at what
-                  we'd change first.
+                  A 30-minute working session with our solution architects — no slides, just a look
+                  at what we'd change first.
                 </p>
               </div>
               <a
@@ -539,9 +546,10 @@ export function Services() {
       </section>
 
       <footer className="border-t border-border bg-background py-10">
-        <div className={`flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row ${PAGE_X}`}>
+        <div
+          className={`flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row ${PAGE_X}`}
+        >
           <div>© {new Date().getFullYear()} Legacy Digitronics Pvt. Ltd. All rights reserved.</div>
-          
         </div>
       </footer>
       <ScrollToTop />
@@ -596,8 +604,8 @@ function CategoryBlock({ category, index }: { category: Category; index: number 
               category.services.length === 1
                 ? "grid-cols-1"
                 : category.services.length === 2
-                ? "sm:grid-cols-2"
-                : "sm:grid-cols-2 2xl:grid-cols-3"
+                  ? "sm:grid-cols-2"
+                  : "sm:grid-cols-2 2xl:grid-cols-3"
             }`}
           >
             {category.services.map((s, i) => (
@@ -635,9 +643,7 @@ function TitleWithAmpersand({ title }: { title: string }) {
       {parts.map((part, i) => (
         <span key={i}>
           {part}
-          {i < parts.length - 1 && (
-            <span className="mx-1 font-serif italic text-navy/70">&</span>
-          )}
+          {i < parts.length - 1 && <span className="mx-1 font-serif italic text-navy/70">&</span>}
         </span>
       ))}
     </>
@@ -670,8 +676,12 @@ function ServiceCard({ service, delay }: { service: Service; delay: number }) {
           <ArrowUpRight className="h-5 w-5 text-navy/30 transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-navy" />
         </div>
 
-        <h3 className="mt-6 font-display text-2xl text-navy"><TitleWithAmpersand title={service.title} /></h3>
-        <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-muted-foreground text-justify">{service.short}</p>
+        <h3 className="mt-6 font-display text-2xl text-navy">
+          <TitleWithAmpersand title={service.title} />
+        </h3>
+        <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-muted-foreground text-justify">
+          {service.short}
+        </p>
 
         <div className="mt-auto">
           <button
@@ -681,7 +691,9 @@ function ServiceCard({ service, delay }: { service: Service; delay: number }) {
             aria-expanded={open}
           >
             {open ? "Show less" : "Learn more"}
-            <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+            <ChevronDown
+              className={`h-3.5 w-3.5 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+            />
           </button>
 
           <motion.div

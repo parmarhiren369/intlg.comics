@@ -14,7 +14,6 @@ import { Footer } from "./Footer";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 
-
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   show: (i: number = 0) => ({
@@ -50,39 +49,32 @@ const pillars = [
 ];
 
 export function Home() {
-
   const testimonials = [
-  {
-    quote:
-      "I've been working with the Legacy Group since my company got started.",
-    name: "Kevin Saylor",
-    designation: "CEO at Financial Recruiters International",
-  },
-  {
-    quote:
-      "I've worked with the Legacy Group at Raj for over seven years.",
-    name: "Gary Boza",
-    designation: "CEO of WorldBridge Partners",
-  },
-  {
-    quote:
-      "Along the way, someone recommended I reach out to Legacy Group International — LGI — and that turned out to be great advice.",
-    name: "Karel Lukas",
-    designation: "Head of the Trevi Group",
-  },
-];
+    {
+      quote: "I've been working with the Legacy Group since my company got started.",
+      name: "Kevin Saylor",
+      designation: "CEO at Financial Recruiters International",
+    },
+    {
+      quote: "I've worked with the Legacy Group at Raj for over seven years.",
+      name: "Gary Boza",
+      designation: "CEO of WorldBridge Partners",
+    },
+    {
+      quote:
+        "Along the way, someone recommended I reach out to Legacy Group International — LGI — and that turned out to be great advice.",
+      name: "Karel Lukas",
+      designation: "Head of the Trevi Group",
+    },
+  ];
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const nextTestimonial = () => {
-    setActiveTestimonial(
-      (current) => (current + 1) % testimonials.length
-    );
+    setActiveTestimonial((current) => (current + 1) % testimonials.length);
   };
 
   const previousTestimonial = () => {
-    setActiveTestimonial(
-      (current) => (current - 1 + testimonials.length) % testimonials.length
-    );
+    setActiveTestimonial((current) => (current - 1 + testimonials.length) % testimonials.length);
   };
 
   useEffect(() => {
@@ -117,17 +109,17 @@ export function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.85),transparent_65%)]" />
         </div>
 
-        <div className={`grid grid-cols-1 items-center gap-12 pt-28 pb-12 lg:grid-cols-[1fr_1fr]
+        <div
+          className={`grid grid-cols-1 items-center gap-12 pt-28 pb-12 lg:grid-cols-[1fr_1fr]
 2xl:grid-cols-[1.1fr_1fr] lg:gap-14 lg:pt-36 xl:gap-24
-2xl:gap-32 ${PAGE_X}`}>
+2xl:gap-32 ${PAGE_X}`}
+        >
           <motion.div
             initial="hidden"
             animate="show"
             variants={{ show: { transition: { staggerChildren: 0.08 } } }}
             className="w-full max-w-[760px] xl:max-w-[820px] 2xl:max-w-[900px]"
           >
-            
-
             <motion.h1
               variants={fadeUp}
               className="mt-6
@@ -155,29 +147,31 @@ xl:text-7xl
               variants={fadeUp}
               className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg xl:text-xl"
             >
-             20+ years of outsourcing excellence since 2005 — from RPO and BPO to KPO,
-              MRO, technical support and digital growth — for the world's most demanding
-              organizations.
+              20+ years of outsourcing excellence since 2005 — from RPO and BPO to KPO, MRO,
+              technical support and digital growth — for the world's most demanding organizations.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <motion.div
+              variants={fadeUp}
+              className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
+            >
               <a
-  href="https://calendly.com/raj-kapoor"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white shadow-(--shadow-gold) transition-transform hover:-translate-y-0.5"
-  style={{ backgroundImage: "var(--gradient-gold)" }}
->
-  Start a conversation
-  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-</a>
-              
-             <Link
-  to="/services"
-  className="inline-flex items-center gap-2 rounded-full border border-navy/20 px-7 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
->
-  Explore our services
-</Link>
+                href="https://calendly.com/raj-kapoor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white shadow-(--shadow-gold) transition-transform hover:-translate-y-0.5"
+                style={{ backgroundImage: "var(--gradient-gold)" }}
+              >
+                Start a conversation
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-2 rounded-full border border-navy/20 px-7 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+              >
+                Explore our services
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -205,9 +199,7 @@ xl:h-[640px]
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-deep/70 via-navy-deep/20 to-transparent p-6">
                 <div className="text-[11px] uppercase tracking-[0.28em] text-gold"></div>
-                <div className="mt-1 font-display text-xl text-white">
-                  
-                </div>
+                <div className="mt-1 font-display text-xl text-white"></div>
               </div>
             </div>
           </motion.div>
@@ -223,7 +215,10 @@ xl:h-[640px]
             className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border shadow-(--shadow-elegant) sm:grid-cols-2 lg:grid-cols-4"
           >
             {stats.map((s) => (
-              <div key={s.label} className="group relative bg-card px-6 py-10 transition-colors hover:bg-navy">
+              <div
+                key={s.label}
+                className="group relative bg-card px-6 py-10 transition-colors hover:bg-navy"
+              >
                 <div className="text-3xl font-semibold text-navy transition-colors group-hover:text-gold sm:text-4xl xl:text-5xl">
                   <CountUp to={s.value} suffix={s.suffix} />
                 </div>
@@ -238,7 +233,7 @@ xl:h-[640px]
 
       {/* PILLARS */}
       <section id="about" className="relative scroll-mt-28 py-28 lg:scroll-mt-32">
-       <div className={PAGE_X}>
+        <div className={PAGE_X}>
           <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-14 xl:gap-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -294,21 +289,21 @@ xl:h-[640px]
                   />
                 </motion.div>
                 <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ delay: 0.2, duration: 0.6 }}
-  className="col-span-2 overflow-hidden rounded-2xl shadow-(--shadow-elegant) sm:col-span-6"
->
-  <img
-    src={story2}
-    alt="Global operations delivery center"
-    loading="lazy"
-    width={1024}
-    height={1024}
-    className="h-[300px] w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-64"
-  />
-</motion.div>
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                  className="col-span-2 overflow-hidden rounded-2xl shadow-(--shadow-elegant) sm:col-span-6"
+                >
+                  <img
+                    src={story2}
+                    alt="Global operations delivery center"
+                    loading="lazy"
+                    width={1024}
+                    height={1024}
+                    className="h-[300px] w-full object-cover transition-transform duration-700 hover:scale-105 sm:h-64"
+                  />
+                </motion.div>
               </div>
             </motion.div>
 
@@ -327,16 +322,14 @@ xl:h-[640px]
                     style={{ backgroundImage: "var(--gradient-gold)", transformOrigin: "left" }}
                   />
                   <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#377589] text-white">
-  <p.icon className="h-5 w-5" />
-</div>
+                    <p.icon className="h-5 w-5" />
+                  </div>
 
-<h3 className="relative mt-6 text-xl text-navy">
-  {p.title}
-</h3>
+                  <h3 className="relative mt-6 text-xl text-navy">{p.title}</h3>
 
-<p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
-  {p.body}
-</p>
+                  <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {p.body}
+                  </p>
                 </motion.div>
               ))}
               <motion.div
@@ -344,7 +337,7 @@ xl:h-[640px]
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-               className="group relative isolate flex min-h-[224px] items-center justify-center overflow-visible rounded-2xl border border-border bg-card p-6"
+                className="group relative isolate flex min-h-[224px] items-center justify-center overflow-visible rounded-2xl border border-border bg-card p-6"
               >
                 <img
                   src={growthIllustration}
@@ -360,75 +353,70 @@ xl:h-[640px]
                 transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 className="relative overflow-hidden rounded-2xl p-8 text-white sm:col-span-2"
                 style={{
-  background: "linear-gradient(135deg, #377589, #377589)",
-}}
+                  background: "linear-gradient(135deg, #377589, #377589)",
+                }}
               >
-                
                 <div className="relative">
-  <div className="text-xs uppercase tracking-[0.28em] text-white">
-    Since 2005 · 20+ Years
-  </div>
+                  <div className="text-xs uppercase tracking-[0.28em] text-white">
+                    Since 2005 · 20+ Years
+                  </div>
 
-  <div className="mt-6 flex items-center gap-4">
+                  <div className="mt-6 flex items-center gap-4">
+                    {/* Previous */}
+                    <button
+                      type="button"
+                      onClick={previousTestimonial}
+                      aria-label="Previous testimonial"
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                    >
+                      <ArrowLeft className="h-5 w-5" />
+                    </button>
 
-    {/* Previous */}
-    <button
-      type="button"
-      onClick={previousTestimonial}
-      aria-label="Previous testimonial"
-      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-    >
-      <ArrowLeft className="h-5 w-5" />
-    </button>
+                    {/* Testimonial */}
+                    <div className="min-w-0 flex-1 text-center">
+                      <p
+                        key={activeTestimonial}
+                        className="font-display text-2xl leading-snug text-white"
+                      >
+                        "{testimonials[activeTestimonial].quote}"
+                      </p>
 
-    {/* Testimonial */}
-    <div className="min-w-0 flex-1 text-center">
-  <p
-    key={activeTestimonial}
-    className="font-display text-2xl leading-snug text-white"
-  >
-    "{testimonials[activeTestimonial].quote}"
-  </p>
+                      <div className="mt-6 text-center">
+                        <div className="text-sm font-semibold text-white">
+                          — {testimonials[activeTestimonial].name}
+                        </div>
 
-  <div className="mt-6 text-center">
-    <div className="text-sm font-semibold text-white">
-      — {testimonials[activeTestimonial].name}
-    </div>
+                        <div className="mt-1 text-sm text-white/70">
+                          {testimonials[activeTestimonial].designation}
+                        </div>
+                      </div>
+                    </div>
+                    {/* Next */}
+                    <button
+                      type="button"
+                      onClick={nextTestimonial}
+                      aria-label="Next testimonial"
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                    >
+                      <ArrowRight className="h-5 w-5" />
+                    </button>
+                  </div>
 
-    <div className="mt-1 text-sm text-white/70">
-      {testimonials[activeTestimonial].designation}
-    </div>
-  </div>
-</div>
-    {/* Next */}
-    <button
-      type="button"
-      onClick={nextTestimonial}
-      aria-label="Next testimonial"
-      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-    >
-      <ArrowRight className="h-5 w-5" />
-    </button>
-
-  </div>
-
-  {/* Slide indicators */}
-  <div className="mt-6 flex justify-center gap-2">
-    {testimonials.map((_, index) => (
-      <button
-        key={index}
-        type="button"
-        onClick={() => setActiveTestimonial(index)}
-        aria-label={`Go to testimonial ${index + 1}`}
-        className={`h-2 w-2 rounded-full transition-all ${
-          activeTestimonial === index
-            ? "bg-[#EE8021]"
-            : "bg-white/40"
-        }`}
-      />
-    ))}
-  </div>
-</div>
+                  {/* Slide indicators */}
+                  <div className="mt-6 flex justify-center gap-2">
+                    {testimonials.map((_, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        onClick={() => setActiveTestimonial(index)}
+                        aria-label={`Go to testimonial ${index + 1}`}
+                        className={`h-2 w-2 rounded-full transition-all ${
+                          activeTestimonial === index ? "bg-[#EE8021]" : "bg-white/40"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -437,29 +425,30 @@ xl:h-[640px]
 
       {/* CTA STRIP */}
       <section
-  id="contact"
-  className="relative scroll-mt-28 overflow-hidden bg-background py-14 lg:scroll-mt-32"
->
-        
-        <div className={`flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center ${PAGE_X}`}>
+        id="contact"
+        className="relative scroll-mt-28 overflow-hidden bg-background py-14 lg:scroll-mt-32"
+      >
+        <div
+          className={`flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center ${PAGE_X}`}
+        >
           <div>
             <div className="text-sm font-semibold uppercase tracking-[0.28em] text-[#EE7F23]">
-  Ready when you are
-</div>
+              Ready when you are
+            </div>
             <h3 className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-black sm:text-4xl">
               Let's architect the next decade of your operations.
             </h3>
           </div>
-         <a
-  href="https://calendly.com/raj-kapoor"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white shadow-(--shadow-gold) transition-transform hover:-translate-y-0.5"
-  style={{ backgroundImage: "var(--gradient-gold)" }}
->
-  Speak with our team
-  <ArrowRight className="h-4 w-4" />
-</a>
+          <a
+            href="https://calendly.com/raj-kapoor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white shadow-(--shadow-gold) transition-transform hover:-translate-y-0.5"
+            style={{ backgroundImage: "var(--gradient-gold)" }}
+          >
+            Speak with our team
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </section>
 
